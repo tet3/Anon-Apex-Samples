@@ -13,4 +13,4 @@
 
 Undelete [SELECT Id from Account 
 		  WHERE LastModified.Name LIKE ‘%Passovoy%’ 
-		        AND Deleted = TRUE];
+		        AND Deleted = TRUE ALL ROWS];
