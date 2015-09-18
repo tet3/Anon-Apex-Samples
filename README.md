@@ -1,4 +1,4 @@
-DF14-Anon-Apex
+Anon-Apex-Samples
 ==============
 
-Code Samples from the Dreamforce 2014 "Using the Developer Console as an Admin" session
+Code Samples Dreamforce sessions in 2014 and 2015
