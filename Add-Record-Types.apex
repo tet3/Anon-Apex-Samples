@@ -8,14 +8,14 @@ Schema.DescribeSObjectResult descAcct = Schema.SObjectType.Account;
 Map<String,Schema.RecordTypeInfo> rtMapByName = descAcct.getRecordTypeInfosByName();
 
 List<Account> accts =	[SELECT Id, RecordTypeId, Type 
-	                    FROM Account 
-	                    WHERE RecordTypeID = NULL
-	                    LIMIT 10000];
+	                 FROM Account 
+	                 WHERE RecordTypeID = NULL
+	                 LIMIT 10000];
 	                    
 for (Account a : accts) {
-  if(a.Type.contains('Partner')) {
-    a.RecordTypeId = rtMapByName.get('Customer').getRecordTypeId(); // Partner
-  }
+  	if(a.Type.contains('Partner')) {
+    		a.RecordTypeId = rtMapByName.get('Customer').getRecordTypeId(); // Partner
+  	}
 	else if (a.Type.equals('Customer - Direct')) {
 		a.RecordTypeId = rtMapByName.get('Customer').getRecordTypeId(); // Customer Direct
 	}
