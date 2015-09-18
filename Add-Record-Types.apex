@@ -14,10 +14,10 @@ List<Account> accts =	[SELECT Id, RecordTypeId, Type
 	                    
 for (Account a : accts) {
   	if(a.Type.contains('Partner')) {
-    		a.RecordTypeId = rtMapByName.get('Customer').getRecordTypeId(); // Partner
+    		a.RecordTypeId = rtMapByName.get('Partner').getRecordTypeId(); // Partner
   	}
 	else if (a.Type.equals('Customer - Direct')) {
-		a.RecordTypeId = rtMapByName.get('Customer').getRecordTypeId(); // Customer Direct
+		a.RecordTypeId = rtMapByName.get('Customer - Direct').getRecordTypeId(); // Customer Direct
 	}
 	else {
 		a.RecordTypeId = rtMapByName.get('Customer').getRecordTypeId(); // Customer
